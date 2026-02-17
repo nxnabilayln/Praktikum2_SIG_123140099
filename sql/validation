@@ -1,0 +1,11 @@
+-- Convert geometry to WKT format
+SELECT id, nama, ST_AsText(geom)
+FROM wilayah;
+
+-- Convert geometry to GeoJSON format
+SELECT nama, ST_AsGeoJSON(geom)
+FROM wilayah;
+
+-- Check geometry validity
+SELECT nama, ST_IsValid(geom) AS is_valid
+FROM wilayah;
