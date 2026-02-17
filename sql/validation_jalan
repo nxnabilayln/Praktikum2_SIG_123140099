@@ -1,0 +1,10 @@
+-- Validation for LineString
+
+SELECT id, nama, ST_AsText(geom)
+FROM jalan;
+
+SELECT nama, ST_AsGeoJSON(geom)
+FROM jalan;
+
+SELECT nama, ST_IsValid(geom) AS is_valid
+FROM jalan;
